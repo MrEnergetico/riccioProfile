@@ -1,0 +1,95 @@
+@import url(https://db.onlinewebfonts.com/c/5d16302487bcb9014a1d48f0f78e3e51?family=Panton+Black+Caps);
+
+@media only screen and (min-width: 750px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-image: url("./media/sito/background.png");
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #schermatainizio {
+        position: fixed; top: 0; left: 0; z-index: 999;
+        width: 100vw; height: 100vw;
+
+        margin-top: 0px;
+        margin-left: 0px;
+
+        text-align: center;
+
+        font-size: 100px;
+        color: aqua;
+        background-color: black;
+
+        font-family: "Panton Black Caps";
+    }
+
+    #schermatainizio.hide {
+        opacity: 0; visibility: hidden;
+        transition: all 2s;
+    }
+
+    .profileBox {
+        width: 360px;
+        height: 350px;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        margin-top: calc(50% - 600px);
+        margin-left: calc(50% - 160px);
+        border-radius: 15px;
+        opacity: 1;
+        
+    }
+
+    #immagine {
+        width: 70px;
+        height: 70px;
+        border-radius: 20%;
+        margin-top: 20px;
+        margin-left: 145px;
+        position: auto;
+    }
+
+    #immagine:hover{
+        cursor: progress;  
+    }
+
+    .nome{
+        font-size: 25px;
+        color: white;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        font-family: "Panton Black Caps";
+        font-weight: 100;
+        font-style: normal;
+        position: static;
+    }
+
+    .nome:hover{
+        transition: all 1ms;
+        color: aqua;
+    }
+
+    .descrizione {
+        color: white;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        font-weight: 70;
+        font-style: normal;
+        position: static;
+    }
+
+    .descrizione:hover {
+        transition: all 1ms;
+        color: aqua;
+    }
+}
