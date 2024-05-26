@@ -6,11 +6,15 @@ function start () {
 
     let splash = document.getElementById("schermatainizio")
 
+    document.getElementById("bgm").pause();
+
     splash.classList.add("hide")
 
     splash.addEventListener("transitionend", () => {
 
-        document.getElementById("bgm").play();
-        splash.remove();
+        setTimeout(() => {
+            document.getElementById("bgm").play();
+            splash.remove();
+        }, 100);
     });
 }
