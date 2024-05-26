@@ -7,30 +7,9 @@
     }
     
     body {
-        background-image: url("./media/sito/background.png");
+        background-image: url("../media/sito/background.png");
         background-size: cover;
         background-attachment: fixed;
-    }
-
-    #schermatainizio {
-        position: fixed; top: 0; left: 0; z-index: 999;
-        width: 100vw; height: 100vw;
-
-        margin-top: 0px;
-        margin-left: 0px;
-
-        text-align: center;
-
-        font-size: 100px;
-        color: aqua;
-        background-color: black;
-
-        font-family: "Panton Black Caps";
-    }
-
-    #schermatainizio.hide {
-        opacity: 0; visibility: hidden;
-        transition: all 2s;
     }
 
     .profileBox {
@@ -42,7 +21,7 @@
         margin-left: calc(50% - 160px);
         border-radius: 15px;
         opacity: 1;
-        
+        cursor: cell;
     }
 
     #immagine {
@@ -55,7 +34,7 @@
     }
 
     #immagine:hover{
-        cursor: progress;  
+        cursor: not-allowed;
     }
 
     .nome{
@@ -91,5 +70,22 @@
     .descrizione:hover {
         transition: all 1ms;
         color: aqua;
+    }
+
+    #ehyy {
+        visibility: hidden;
+
+        height: 0px;
+        width: 0px;
+    }
+
+    #ehyy.yo {
+        visibility: visible;
+        
+        width: 1480px;
+        height: 650px;
+
+        margin-top: 50px;
+        margin-left: 0px;
     }
 }

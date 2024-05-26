@@ -1,105 +1,35 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+
     <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet">
-    <script src="./script.js"></script>
+
+    <link href="./css/main.css" rel="stylesheet">
+
+    <link href="./css/start.css" rel="stylesheet">
+
+    <link href="./css/snow.css" rel="stylesheet">
+
+
+    <script src="./js/website-open.js"></script>
+
+    <script src="./js/music.js"></script>
+
+    <script src="./js/title.js"></script>
+
+    <script src="./js/altro.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>IL_RICCIO</title>
+
     <link rel="website icon" type="png" href="./media/sito/icon.png">
-
-    <script>
-
-        const updateTitle = () => {
-
-            setTimeout(() => {
-                document.title = 'I'
-            }, 300);
-                
-            setTimeout(() => {
-                document.title = 'IL'
-            }, 600);
-
-            setTimeout(() => {
-                document.title = 'IL_'
-            }, 900);
-
-            setTimeout(() => {
-                document.title = 'IL_R'
-            }, 1200);
-
-            setTimeout(() => {
-                document.title = 'IL_RI'
-            }, 1500);
-
-            setTimeout(() => {
-                document.title = 'IL_RIC'
-            }, 1800);
-
-            setTimeout(() => {
-                document.title = 'IL_RICC'
-            }, 2100);
-
-            setTimeout(() => {
-                document.title = 'IL_RICCI'
-            }, 2400);
-
-            setTimeout(() => {
-                document.title = 'IL_RICCIO'
-            }, 2700);
-
-
-            setInterval(() => {
-                
-                setTimeout(() => {
-                    document.title = 'I'
-                }, 300);
-                
-                setTimeout(() => {
-                    document.title = 'IL'
-                }, 600);
-
-                setTimeout(() => {
-                    document.title = 'IL_'
-                }, 900);
-
-                setTimeout(() => {
-                    document.title = 'IL_R'
-                }, 1200);
-
-                setTimeout(() => {
-                    document.title = 'IL_RI'
-                }, 1500);
-
-                setTimeout(() => {
-                    document.title = 'IL_RIC'
-                }, 1800);
-
-                setTimeout(() => {
-                    document.title = 'IL_RICC'
-                }, 2100);
-
-                setTimeout(() => {
-                    document.title = 'IL_RICCI'
-                }, 2400);
-
-                setTimeout(() => {
-                    document.title = 'IL_RICCIO'
-                }, 2700);
-
-
-            }, "3000");
-        }
-
-        window.onload = updateTitle
-
-    </script>
 
 </head>
 
 <body>
+
+    <img src="./media/profilo/hi.png" id="ehyy">
 
     <audio id="bgm" src="./media/sito/song.mp3" loop></audio>
 
@@ -109,7 +39,7 @@
 
         <div class="profileBox">
 
-            <img src="./media/sito/riccio-pfp.jpg" id="immagine", onclick="alert('Salve, io sono Riccio!')">
+            <img src="./media/profilo/pfp.png" id="immagine", onclick="seisicuro ()">
 
             <div class="nome">IL_RICCIO</div>
             
@@ -129,69 +59,6 @@
 
     </div>
 
-    <style>
-
-        .snow-wrapper {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 999;
-        }
-
-        .snow {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: white;
-            animation: fallingSnow 3s linear infinite;
-
-            position: absolute;
-            left: 0;
-            top: -40px;
-        }
-
-        @keyframes fallingSnow {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(100vh);
-            }
-        }
-
-        .snow:nth-child(1) {
-            left: 80%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 0s;
-            animation-duration: 4s;
-        }
-
-        .snow:nth-child(2) {
-            left: 50%;
-            width: 30px;
-            height: 30px;
-            animation-delay: 3s;
-        }
-
-        .snow:nth-child(3) {
-            left: 25%;
-            width: 40px;
-            height: 40px;
-            animation-delay: 2s;
-        }
-
-        .snow:nth-child(4) {
-            left: 15%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 3s;
-        }
-
-    </style>
-
 </body>
+
 </html>

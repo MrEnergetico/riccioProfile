@@ -1,0 +1,33 @@
+@import url(https://db.onlinewebfonts.com/c/5d16302487bcb9014a1d48f0f78e3e51?family=Panton+Black+Caps);
+
+@media only screen and (min-width: 750px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #schermatainizio {
+        position: fixed; top: 0; left: 0; z-index: 999;
+        width: 100vw; height: 100vw;
+
+        margin-top: 0px;
+        margin-left: 0px;
+
+        text-align: center;
+
+        font-size: 100px;
+        color: aqua;
+        background-color: black;
+
+        font-family: "Panton Black Caps";
+
+        cursor: cell;
+    }
+
+    #schermatainizio.hide {
+        transition: all 2s;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
