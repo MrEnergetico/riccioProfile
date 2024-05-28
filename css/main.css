@@ -1,29 +1,32 @@
 @import url(https://db.onlinewebfonts.com/c/5d16302487bcb9014a1d48f0f78e3e51?family=Panton+Black+Caps);
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 150px) {
     * {
         margin: 0;
         padding: 0;
     }
     
+    /*BACKGROUND*/
     body {
         background-image: url("../media/sito/background.png");
         background-size: cover;
         background-attachment: fixed;
     }
 
+    /*1° BOX*/
     .profileBox {
         width: 360px;
-        height: 350px;
+        height: 210px;
         background-color: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(10px);
-        margin-top: calc(50% - 600px);
-        margin-left: calc(50% - 160px);
+        margin-top: 150px;
+        margin-left: calc(50% - 180px);
         border-radius: 15px;
         opacity: 1;
         cursor: cell;
     }
 
+    /*PFP*/
     #immagine {
         width: 70px;
         height: 70px;
@@ -32,32 +35,40 @@
         margin-left: 145px;
         position: auto;
     }
-
     #immagine:hover{
-        cursor: not-allowed;
+        transition: all 2s;
+        border-radius: 100%;
+        transform: rotate(360deg);
+        transform: rotate(-360deg);
     }
 
-    .nome{
+    /*NOME*/
+    .nome {
         font-size: 25px;
         color: white;
-        margin-top: 10px;
-        margin-left: 10px;
+        margin-top: 5px;
         margin-right: 10px;
         text-align: center;
         font-family: "Panton Black Caps";
         font-weight: 100;
         font-style: normal;
         position: static;
+
+        align-items: center;
+        justify-content: center;
+        display: flex;
     }
+
 
     .nome:hover{
         transition: all 1ms;
         color: aqua;
     }
 
+    /*DESCRIZIONE*/
     .descrizione {
         color: white;
-        margin-top: 10px;
+        margin-top: 5px;
         margin-left: 10px;
         margin-right: 10px;
         font-family: "Roboto", sans-serif;
@@ -66,26 +77,69 @@
         font-style: normal;
         position: static;
     }
-
     .descrizione:hover {
         transition: all 1ms;
         color: aqua;
     }
 
-    #ehyy {
-        visibility: hidden;
-
-        height: 0px;
-        width: 0px;
+    /*2° BOX*/
+    .linksbox {
+        width: 720px;
+        height: 80px;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        margin-top: 30px;
+        margin-left: calc(50% - 360px);
+        border-radius: 15px;
+        opacity: 1;
+        cursor: cell;
     }
 
-    #ehyy.yo {
-        visibility: visible;
+    /*MARISA BELARDA*/
+    #telegramlogo {
+        margin-top: 10px;
+        margin-left: calc(25% - 30px);
+    }
+    #telegramlogo:hover {
         
-        width: 1480px;
-        height: 650px;
+        transition: all 200ms;
 
-        margin-top: 50px;
-        margin-left: 0px;
+        transform: scale(1.2);
+    }
+
+    /*DISCORD*/
+    #dslogo {
+        margin-top: 10px;
+        margin-left: calc(25% - 60px);
+
+        animation: respiroanimation linear infinite;
+
+        animation-duration: 2s;
+    }
+    @keyframes respiroanimation {
+        
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.25);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    /*GITHUB*/
+    #githublogo {
+        margin-top: 10px;
+        margin-left: calc(25% - 65px);
+    }
+    #githublogo:hover {
+
+        transition: all 200ms;
+
+        transform: scale(1.2);
     }
 }

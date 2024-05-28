@@ -17,17 +17,38 @@
         text-align: center;
 
         font-size: 100px;
-        color: aqua;
+        color: red;
         background-color: black;
 
         font-family: "Panton Black Caps";
 
         cursor: cell;
+
+        animation: colortransition linear infinite;
+
+        animation-duration: 3s;
     }
 
     #schermatainizio.hide {
-        transition: all 2s;
+        transition: all 0ms;
         opacity: 0;
         visibility: hidden;
+    }
+
+    @keyframes colortransition {
+        
+        14.28571428571429% {color: red; }
+
+        28.57142857142858% { color: orange; }
+
+        42.85714285714287% { color: yellow; }
+
+        57.14285714285716% { color: lime; }
+
+        71.42857142857144% { color: blue; }
+
+        85.71428571428574% { color:  indigo; }
+
+        100% { color: purple; }
     }
 }

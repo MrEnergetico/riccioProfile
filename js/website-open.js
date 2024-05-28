@@ -1,3 +1,3 @@
-function websiteOpen(url, page) {
+function schedaOpen(url, page) {
     window.open(url, page)
 }

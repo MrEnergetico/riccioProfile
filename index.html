@@ -1,64 +1,40 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-
     <meta charset="UTF-8">
-
     <link href="./css/main.css" rel="stylesheet">
-
     <link href="./css/start.css" rel="stylesheet">
-
     <link href="./css/snow.css" rel="stylesheet">
-
-
     <script src="./js/website-open.js"></script>
-
-    <script src="./js/music.js"></script>
-
+    <script src="./js/start.js"></script>
     <script src="./js/title.js"></script>
-
-    <script src="./js/altro.js"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>IL_RICCIO</title>
-
+    <script src="./js/serverslist.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>𝗜𝗟_𝗥𝗜𝗖𝗖𝗜𝗢</title>
     <link rel="website icon" type="png" href="./media/sito/icon.png">
-
 </head>
-
 <body>
-
-    <img src="./media/profilo/hi.png" id="ehyy">
-
-    <audio id="bgm" src="./media/sito/song.mp3" loop></audio>
-
+    <audio id="bgm" src="./media/sito/songs/Extravaganza.mp3" loop></audio> <!--CREDITS: Jules Gaia-->
+    <audio id="bgm1" src="./media/sito/songs/Bling-Bang-Bang-Born.mp3" loop></audio> <!--CREDITS: Creepy Nuts-->
     <div id="schermatainizio" onclick="start ()"><br><br>CLICCA PER CONTINUARE</div>
-
     <div>
-
         <div class="profileBox">
-
-            <img src="./media/profilo/pfp.png" id="immagine", onclick="seisicuro ()">
-
+            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            <img src="./media/profilo/pfp.png" id="immagine">
             <div class="nome">IL_RICCIO</div>
-            
-            <div class="descrizione">Html & Css and Javascript Dev<br>Video Editor & Graphic</div>
-
+            <div class="descrizione"><span class="auto-type"></span></div>
         </div>
-
+        <div class="linksbox">
+            <img src="./media/profilo/icons/telegramlogo.png" id="telegramlogo", width="60px" onclick="schedaOpen('https:/\\/t.me/il_riccio1234')">
+            <img src="./media/profilo/icons/dslogo.png" id="dslogo" width="60px" onclick="changetodiscordserverlist ()">
+            <img src="./media/profilo/icons/githublogo.png" id="githublogo" width="60px" onclick="schedaOpen('https:/\\/github.com/riccio1234')">
+        </div>
     </div>
-
-
     <div class="snow-wrapper">
-
        <div class="snow"></div>
        <div class="snow"></div>
        <div class="snow"></div>
        <div class="snow"></div>
-
     </div>
-
 </body>
-
 </html>
