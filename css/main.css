@@ -1,4 +1,4 @@
-@import url(https://db.onlinewebfonts.com/c/5d16302487bcb9014a1d48f0f78e3e51?family=Panton+Black+Caps);
+@font-face { font-family: Panton\ Black\ Caps; src: url(../utils/fonts/Panton\ Black\ Caps.ttf); }
 
 @media only screen and (min-width: 150px) {
     * {
@@ -61,7 +61,6 @@
 
 
     .nome:hover{
-        transition: all 1ms;
         color: aqua;
     }
 
@@ -78,7 +77,6 @@
         position: static;
     }
     .descrizione:hover {
-        transition: all 1ms;
         color: aqua;
     }
 
@@ -101,9 +99,7 @@
         margin-left: calc(25% - 30px);
     }
     #telegramlogo:hover {
-        
         transition: all 200ms;
-
         transform: scale(1.2);
     }
 
@@ -111,9 +107,7 @@
     #dslogo {
         margin-top: 10px;
         margin-left: calc(25% - 60px);
-
         animation: respiroanimation linear infinite;
-
         animation-duration: 2s;
     }
     @keyframes respiroanimation {
@@ -137,9 +131,12 @@
         margin-left: calc(25% - 65px);
     }
     #githublogo:hover {
-
         transition: all 200ms;
-
         transform: scale(1.2);
+    }
+
+    #lucchetto {
+        margin-top: calc(14% - 25px);
+        margin-left: calc(98% - 25px);
     }
 }

@@ -8,15 +8,15 @@
     <script src="./js/website-open.js"></script>
     <script src="./js/start.js"></script>
     <script src="./js/title.js"></script>
-    <script src="./js/serverslist.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>𝗜𝗟_𝗥𝗜𝗖𝗖𝗜𝗢</title>
     <link rel="website icon" type="png" href="./media/sito/icon.png">
 </head>
 <body>
-    <audio id="bgm" src="./media/sito/songs/Extravaganza.mp3" loop></audio> <!--CREDITS: Jules Gaia-->
-    <audio id="bgm1" src="./media/sito/songs/Bling-Bang-Bang-Born.mp3" loop></audio> <!--CREDITS: Creepy Nuts-->
-    <div id="schermatainizio" onclick="start ()"><br><br>CLICCA PER CONTINUARE</div>
+    <audio id="bgm" src="./media/sito/songs/Extravaganza.mp3" loop></audio>
+    <audio id="bgm1" src="./media/sito/songs/Bling-Bang-Bang-Born.mp3" loop></audio>
+    <div id="first-start" onclick="start ()"></div>
+    <div id="schermatainizio"><br><br>CLICCA PER CONTINUARE</div>
     <div>
         <div class="profileBox">
             <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -26,9 +26,10 @@
         </div>
         <div class="linksbox">
             <img src="./media/profilo/icons/telegramlogo.png" id="telegramlogo", width="60px" onclick="schedaOpen('https:/\\/t.me/il_riccio1234')">
-            <img src="./media/profilo/icons/dslogo.png" id="dslogo" width="60px" onclick="changetodiscordserverlist ()">
+            <img src="./media/profilo/icons/dslogo.png" id="dslogo" width="60px" onclick="window.location.href='servers-list.html'">
             <img src="./media/profilo/icons/githublogo.png" id="githublogo" width="60px" onclick="schedaOpen('https:/\\/github.com/riccio1234')">
         </div>
+        <img src="./media/sito/lucchetto.png" width="50px" id="lucchetto" onclick="window.location.href='./privata/login.html'">
     </div>
     <div class="snow-wrapper">
        <div class="snow"></div>

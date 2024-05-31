@@ -1,0 +1,75 @@
+@font-face { font-family: Panton\ Black\ Caps; src: url(../utils/fonts/Panton\ Black\ Caps.ttf); }
+
+@media only screen and (min-width: 150px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: url("../media/sito/background.png");
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #homeicon {
+        margin-top: 10px;
+        margin-left: 92%;
+    }
+
+    .login-box {
+        width: 720px;
+        height: 190px;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        margin-top: 70px;
+        margin-left: calc(50% - 360px);
+        border-radius: 15px;
+        opacity: 1;
+    }
+    .boh {
+        width: 0px;
+        height: 15px;
+    }
+    .title {
+        font-size: 25px;
+        color: white;
+        text-align: center;
+        font-family: "Panton Black Caps";
+        font-weight: 100;
+    }
+
+    .input {
+        width: 65%;
+        padding: 12px 20px;
+        margin: 45px;
+        box-sizing: border-box;
+        color: white;
+        background-color: gray;
+        cursor:default;
+    }
+
+    .button {
+        color: #ffffff;
+		background-color: #383c34;
+		font-size: 15px;
+        font-family: "Panton Black Caps";
+        border-color: #383c34;
+		padding: 12px 40px;
+		cursor: pointer
+    }
+
+    .perr {
+       visibility: hidden; 
+    }
+
+    .perr.show {
+        visibility: visible;
+        font-size: 15px;
+        color: white;
+        margin-top: -110px;
+        margin-left: 50px;
+
+        font-family: "Roboto", sans-serif;
+    }
+}

@@ -1,4 +1,4 @@
-@import url(https://db.onlinewebfonts.com/c/5d16302487bcb9014a1d48f0f78e3e51?family=Panton+Black+Caps);
+@font-face { font-family: Panton\ Black\ Caps; src: url(../utils/fonts/Panton\ Black\ Caps.ttf); }
 
 @media only screen and (min-width: 150px) {
     * {
@@ -12,8 +12,6 @@
         background-attachment: fixed;
     }
 
-
-    
     #icon {
         border-radius: 20%;
 
@@ -51,12 +49,10 @@
         margin-left: calc(50% - 150px);
     }
 
-
     #homeicon {
         margin-top: 10px;
         margin-left: 92%;
     }
-
 
     .hyperstudios {
         width: 360px;
