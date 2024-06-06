@@ -1,51 +1,49 @@
 @font-face { font-family: Panton\ Black\ Caps; src: url(../utils/fonts/Panton\ Black\ Caps.ttf); }
 
-@media only screen and (min-width: 750px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
+* {
+    margin: 0;
+    padding: 0;
+}
 
-    #first-start {
-        visibility: visible;
-        position: fixed; top: 0; left: 0; z-index: 999;
-        width: 100vw; height: 100vw;
-        margin-top: 0px;
-        margin-left: 0px;
-        cursor: cell;
-        opacity: 0%;;
-    }
-    #first-start.hide {
-        opacity: 0;
-        visibility: hidden;
-    }
+#first-start {
+    visibility: visible;
+    position: fixed; top: 0; left: 0; z-index: 999;
+    width: 100vw; height: 100vw;
+    margin-top: 0px;
+    margin-left: 0px;
+    cursor: cell;
+    opacity: 0%;;
+}
+#first-start.hide {
+    opacity: 0;
+    visibility: hidden;
+}
 
-    #schermatainizio {
-        position: fixed; top: 0; left: 0; z-index: 998;
-        width: 100vw; height: 100vw;
-        margin-top: 0px;
-        margin-left: 0px;
-        text-align: center;
-        font-size: 100px;
-        color: red;
-        background-color: black;
-        font-family: "Panton Black Caps";
-        animation: colortransition linear infinite;
-        animation-duration: 3s;
-    }
-    #schermatainizio.hide {
-        transition: all 1s;
-        opacity: 0;
-        visibility: hidden;
-    }
+#schermatainizio {
+    position: fixed; top: 0; left: 0; z-index: 998;
+    width: 100%; height: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    text-align: center;
+    font-size: 100px;
+    color: red;
+    background-color: black;
+    font-family: "Panton Black Caps";
+    animation: colortransition linear infinite;
+    animation-duration: 3s;
+}
+#schermatainizio.hide {
+    transition: all 1s;
+    opacity: 0;
+    visibility: hidden;
+}
 
-    @keyframes colortransition {
-        14.28571428571429% {color: red; }
-        28.57142857142858% { color: orange; }
-        42.85714285714287% { color: yellow; }
-        57.14285714285716% { color: lime; }
-        71.42857142857144% { color: blue; }
-        85.71428571428574% { color:  indigo; }
-        100% { color: purple; }
-    }
+@keyframes colortransition {
+    14.28571428571429% {color: red; }
+    28.57142857142858% { color: orange; }
+    42.85714285714287% { color: yellow; }
+    57.14285714285716% { color: lime; }
+    71.42857142857144% { color: blue; }
+    85.71428571428574% { color:  indigo; }
+    100% { color: purple; }
 }

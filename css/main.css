@@ -1,142 +1,178 @@
 @font-face { font-family: Panton\ Black\ Caps; src: url(../utils/fonts/Panton\ Black\ Caps.ttf); }
 
-@media only screen and (min-width: 150px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*BACKGROUND*/
+body {
+    background-image: url("../media/sito/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*1° BOX*/
+.profileBox {
+    width: 360px;
+    height: 210px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    margin-top: 150px;
+    margin-left: calc(50% - 180px);
+    border-radius: 15px;
+    opacity: 1;
+    cursor: cell;
+}
+
+/*PFP*/
+#immagine {
+    width: 70px;
+    height: 70px;
+    border-radius: 20%;
+    margin-top: 20px;
+    margin-left: 145px;
+    position: auto;
+}
+#immagine:hover{
+    transition: all 2s;
+    border-radius: 100%;
+    transform: rotate(360deg);
+    transform: rotate(-360deg);
+}
+
+/*NOME*/
+.nome {
+    font-size: 25px;
+    color: white;
+    margin-top: 5px;
+    margin-right: 10px;
+    text-align: center;
+    font-family: "Panton Black Caps";
+    font-weight: 100;
+    font-style: normal;
+    position: static;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
+.nome:hover{
+    color: aqua;
+}
+
+/*DESCRIZIONE*/
+.descrizione {
+    color: white;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: 70;
+    font-style: normal;
+    position: static;
+}
+.descrizione:hover {
+    color: aqua;
+}
+
+/*2° BOX*/
+.linksbox {
+    width: 720px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    margin-top: 30px;
+    margin-left: calc(50% - 360px);
+    border-radius: 15px;
+    opacity: 1;
+    cursor: cell;
+}
+
+/*MARISA BELARDA*/
+#telegramlogo {
+    margin-top: 10px;
+    margin-left: calc(25% - 30px);
+}
+#telegramlogo:hover {
+    transition: all 200ms;
+    transform: scale(1.2);
+}
+
+/*DISCORD*/
+#dslogo {
+    margin-top: 10px;
+    margin-left: calc(25% - 60px);
+    animation: respiroanimation linear infinite;
+    animation-duration: 2s;
+}
+@keyframes respiroanimation {
     
-    /*BACKGROUND*/
-    body {
-        background-image: url("../media/sito/background.png");
-        background-size: cover;
-        background-attachment: fixed;
+    0% {
+        transform: scale(1);
     }
 
-    /*1° BOX*/
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*GITHUB*/
+#githublogo {
+    margin-top: 10px;
+    margin-left: calc(25% - 65px);
+}
+#githublogo:hover {
+    transition: all 200ms;
+    transform: scale(1.2);
+}
+
+#lucchetto {
+    margin-top: calc(14% - 25px);
+    margin-left: calc(98% - 25px);
+}
+@media screen and (max-width: 400px) {
     .profileBox {
-        width: 360px;
-        height: 210px;
-        background-color: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        margin-top: 150px;
-        margin-left: calc(50% - 180px);
-        border-radius: 15px;
-        opacity: 1;
-        cursor: cell;
+        margin-top: 230px;
+        width: 230px;
+        margin-left: calc(50% - 115px);
     }
-
-    /*PFP*/
     #immagine {
-        width: 70px;
-        height: 70px;
-        border-radius: 20%;
-        margin-top: 20px;
-        margin-left: 145px;
-        position: auto;
+        margin-left: calc(50% - 35px);
     }
-    #immagine:hover{
-        transition: all 2s;
-        border-radius: 100%;
-        transform: rotate(360deg);
-        transform: rotate(-360deg);
-    }
-
-    /*NOME*/
-    .nome {
-        font-size: 25px;
-        color: white;
-        margin-top: 5px;
-        margin-right: 10px;
-        text-align: center;
-        font-family: "Panton Black Caps";
-        font-weight: 100;
-        font-style: normal;
-        position: static;
-
-        align-items: center;
-        justify-content: center;
-        display: flex;
-    }
-
-
-    .nome:hover{
-        color: aqua;
-    }
-
-    /*DESCRIZIONE*/
-    .descrizione {
-        color: white;
-        margin-top: 5px;
-        margin-left: 10px;
-        margin-right: 10px;
-        font-family: "Roboto", sans-serif;
-        text-align: center;
-        font-weight: 70;
-        font-style: normal;
-        position: static;
-    }
-    .descrizione:hover {
-        color: aqua;
-    }
-
-    /*2° BOX*/
     .linksbox {
-        width: 720px;
-        height: 80px;
-        background-color: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        margin-top: 30px;
-        margin-left: calc(50% - 360px);
-        border-radius: 15px;
-        opacity: 1;
-        cursor: cell;
+        width: 280px;
+        margin-left: calc(50% - 140px);
     }
-
-    /*MARISA BELARDA*/
-    #telegramlogo {
-        margin-top: 10px;
-        margin-left: calc(25% - 30px);
+}
+@media screen and (max-width: 800px) and (min-width: 401px) {
+    .profileBox {
+        margin-top: 230px;
     }
-    #telegramlogo:hover {
-        transition: all 200ms;
-        transform: scale(1.2);
+    .linksbox {
+        width: 90%;
+        margin-left: calc(50% - 45%);
     }
-
-    /*DISCORD*/
-    #dslogo {
-        margin-top: 10px;
-        margin-left: calc(25% - 60px);
-        animation: respiroanimation linear infinite;
-        animation-duration: 2s;
+}
+@media  screen and (min-width: 801px) {
+    .profileBox {
+        margin-top: 230px;
     }
-    @keyframes respiroanimation {
-        
-        0% {
-            transform: scale(1);
-        }
-
-        50% {
-            transform: scale(1.25);
-        }
-
-        100% {
-            transform: scale(1);
-        }
+}
+@media screen and (max-width: 278px) {
+    .linksbox {
+        width: 85%;
+        margin-left: calc(50% - 42.5%);
     }
-
-    /*GITHUB*/
-    #githublogo {
-        margin-top: 10px;
-        margin-left: calc(25% - 65px);
-    }
-    #githublogo:hover {
-        transition: all 200ms;
-        transform: scale(1.2);
-    }
-
-    #lucchetto {
-        margin-top: calc(14% - 25px);
-        margin-left: calc(98% - 25px);
+    .profileBox {
+        width: 70%;
+        margin-left: calc(50% - 35%);
     }
 }
