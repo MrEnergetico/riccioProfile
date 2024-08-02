@@ -2,39 +2,50 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <link href="./css/main.css" rel="stylesheet">
-    <link href="./css/start.css" rel="stylesheet">
-    <link href="./css/snow.css" rel="stylesheet">
-    <script src="./js/website-open.js"></script>
-    <script src="./js/start.js"></script>
-    <script src="./js/title.js"></script>
+    <link rel="stylesheet" href="css/snow.css">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/status.js"></script>
+    <script src="js/click.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/fun.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>𝗜𝗟_𝗥𝗜𝗖𝗖𝗜𝗢</title>
-    <link rel="website icon" type="png" href="./media/sito/icon.png">
+    <link rel="website icon" type="png" href="media/sito/icon.png">
 </head>
 <body>
-    <audio id="bgm" src="./media/sito/songs/Extravaganza.mp3" loop></audio>
-    <audio id="bgm1" src="./media/sito/songs/Bling-Bang-Bang-Born.mp3" loop></audio>
-    <div id="first-start" onclick="start ()"></div>
-    <div id="schermatainizio"><br><br>CLICCA PER CONTINUARE</div>
-    <div>
-        <div class="profileBox">
-            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-            <img src="./media/profilo/pfp.png" id="immagine">
-            <div class="nome">IL_RICCIO</div>
-            <div class="descrizione"><span class="auto-type"></span></div>
-        </div>
-        <div class="linksbox">
-            <img src="./media/profilo/icons/telegramlogo.png" id="telegramlogo", width="60px" onclick="schedaOpen('https:/\\/t.me/il_riccio1234')">
-            <img src="./media/profilo/icons/dslogo.png" id="dslogo" width="60px" onclick="window.location.href='servers-list.html'">
-            <img src="./media/profilo/icons/githublogo.png" id="githublogo" width="60px" onclick="schedaOpen('https:/\\/github.com/riccio1234')">
+    <div class="profileBox">
+        <img id="immagine" draggable="false">
+        <img src="" id="avatar-decoration" width="85px" style="position: absolute; margin-top: 8px;" draggable="false">
+        <div class="nome" id="nome"></div>
+        <div class="box">
+            <img width="40px" height="40px" id="b1_1" class="badge_1" draggable="false">
+            <img width="40px" height="40px" id="b2_1" class="badge_1" draggable="false">
+            <img width="40px" height="40px" id="b3_1" class="badge_1" draggable="false">
+            <img width="40px" height="40px" id="b4_1" class="badge_1" draggable="false">
         </div>
     </div>
-    <div class="snow-wrapper">
-       <div class="snow"></div>
-       <div class="snow"></div>
-       <div class="snow"></div>
-       <div class="snow"></div>
+    <div class="linksbox">
+        <img src="media/profilo/icons/telegramlogo.png" id="telegramlogo", width="60px" onclick="window.open('https:/\\/t.me/il_riccio1234')" draggable="false">
+        <img src="media/profilo/icons/dslogo.png" onmouseover="" id="dslogo" width="60px" onclick="window.open('https:/\\/discord.gg/g3te2FHdYG')" draggable="false">
+        <img src="media/profilo/icons/githublogo.png" id="githublogo" width="60px" onclick="window.open('https:/\\/github.com/riccio1234')" draggable="false">
     </div>
+    <div class="snowflakes" aria-hidden="true">
+        <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" onclick="snowflake_click()" draggable="false">
+        <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" onclick="snowflake_click()" draggable="false">
+        <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" onclick="snowflake_click()" draggable="false">
+        <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" onclick="snowflake_click()" draggable="false">
+        <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" onclick="snowflake_click()" draggable="false">
+        <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" onclick="snowflake_click()" draggable="false">
+        <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" onclick="snowflake_click()" draggable="false">
+        <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" onclick="snowflake_click()" draggable="false">
+        <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" onclick="snowflake_click()" draggable="false">
+        <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" onclick="snowflake_click()" draggable="false">
+    </div>
+    <div id="score" class="score"></div>
+    <img src="media/sito/songs/playbutton.png" width="75px" id="play_song" onclick="playsong()" draggable="false">
+    <audio id="song" src="media/sito/songs/psy.mp3" loop></audio>
+    <div class="nuhhu" onmouseover="addio()"></div>
 </body>
 </html>
+
+<!--RICCIO è GAY ... encrypter: https://www.phpkobo.com/html-obfuscator-->
