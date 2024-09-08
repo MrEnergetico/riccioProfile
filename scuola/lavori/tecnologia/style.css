@@ -1,0 +1,51 @@
+@font-face { font-family: Panton\ Black\ Caps; src: url(fonts/Panton\ Black\ Caps.ttf); }
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+*::selection {
+    background-color: transparent;
+}
+
+
+body {
+    background-color: black;
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.title1 {
+    margin-top: 10px;
+    color: white;
+    font-size: 50px;
+    font-family: "Panton Black Caps";
+    text-align: center;
+}
+.title2 {
+    margin-top: 20px;
+    color: white;
+    font-size: 30px;
+    font-family: "Panton Black Caps";
+    text-align: center;
+}
+
+.box1 {
+    width: 700px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.884);
+    margin-left: calc(50% - 350px);
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.text1 {
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    font: "Roboto", sans-serif;
+    text-align: center;
+}

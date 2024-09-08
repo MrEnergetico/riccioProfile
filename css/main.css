@@ -11,8 +11,10 @@
 
 
 body {
-    background-image: url("../media/sito/background.png");
+    background-color: black;
+    background-image: url("../media/sito/backgrounds/1.png");
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
@@ -20,29 +22,11 @@ body {
     width: 100%;
     height: 40px;
     margin-top: -670px;
-}
-
-.score {
-    font-size: 30px;
-    color: white;
-    margin-top: -570px;
-    margin-left: 30px;
-    font-family: "Panton Black Caps";
-    visibility: hidden;
-}
-.score.visible {
-    visibility: visible;
+    color: red;
 }
 
 #play_song {
-    margin-top: 720px;
-    margin-left: 30px;
-    border-radius: 20%;
-    cursor: pointer;
-    position: absolute;
-}
-#play_song.minus {
-    margin-top: 580px;
+    margin-top: 170px;
     margin-left: 30px;
     border-radius: 20%;
     cursor: pointer;
@@ -51,6 +35,7 @@ body {
 #play_song:hover {
     transition: all 0.2s;
     transform: scale(1.1);
+    filter: drop-shadow(5px 5px 40px rgb(200, 0, 255));
 }
 
 .profileBox {
@@ -58,138 +43,118 @@ body {
     height: 300px;
     background-color: rgba(42, 4, 58, 0.422);
     backdrop-filter: blur(10px);
-    margin-top: 0px;
     margin-left: calc(50% - 180px);
     border-radius: 15px;
     opacity: 1;
 }
 
 #immagine {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 100%;
-    margin-top: 15px;
-    margin-left: calc(50% - 35px);
+    margin-top: 20px;
+    margin-left: calc(50% - 40px);
     position: static;
-}
-#immagine:hover {
-    animation: custom_rotation linear infinite;
-    animation-duration: 3s;
+    cursor: pointer;
 }
 
-#avatar-decoration {
-    margin-left: -78px;
-    margin-top: 2px;
+.immagine2 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 20px;
+}
+
+#immagine:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+    filter: drop-shadow(5px 5px 40px rgb(255, 255, 255));
 }
 
 .nome {
-    font-size: 25px;
-    color: white;
+    font-size: 30px;
     margin-top: 5px;
     text-align: center;
     font-family: "Panton Black Caps";
-    animation: colortransition linear infinite;
-    animation-duration: 4.5s;
 }
 
-.box {
-    margin-left: calc(50% - 150px);
-    margin-top: 15px;
-    width: 300px;
-    height: 70px;
-    border-radius: 15px;
-    background-color: #0000005c;
-    backdrop-filter: blur(1px);
+.letter {
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    font-family: "Panton Black Caps";
+    filter: drop-shadow(30px 30px 40px rgba(255, 255, 255));
 }
 
-.badge_1 {
-    margin-top: 15px;
-    margin-left: calc(15% - 20px);
+/*
+    background: -webkit-radial-gradient(#03dbfc, #9d00ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+*/
+
+.links-box {
+    margin-top: 90px;
+    width: 280px;
+    height: 40px;
+    margin-left: calc(50% - 140px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#telegramlogo {
+.links-box svg {
+    color: white;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    margin-top: 30px;
-    margin-left: calc(25% - 30px);
 }
-#telegramlogo:hover {
-    transition: all 200ms;
+
+.links-box svg:hover {
+    transition: all 300ms;
     transform: scale(1.2);
+    cursor: pointer;
+    filter: drop-shadow(5px 5px 40px rgb(255, 255, 255));
 }
 
-#dslogo {
-    cursor: pointer;
-    margin-top: 30px;
-    margin-left: calc(25% - 60px);
+
+@media screen and (min-width: 0px) {
+    .profileBox {
+        margin-top: 210px;
+    }
+    #play_song {
+        margin-top: 190px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .profileBox {
+        width: 260px;
+        margin-left: calc(50% - 130px);
+    }
+    .links-box {
+        background-color: white;
+        width: 20px;
+        height: 50px;
+        margin-left: calc(50% - 140px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .profileBox {
+        width: 160px;
+        margin-left: calc(50% - 80px);
+    }
+    #play_song {
+        margin-left: calc(50% - 37.5px);
+    }
     
 }
-#dslogo:hover {
-    transition: all 200ms;
-    transform: scale(1.2);
-}
 
-#githublogo {
-    cursor: pointer;
-    margin-top: 30px;
-    margin-left: calc(25% - 65px);
-}
-#githublogo:hover {
-    transition: all 200ms;
-    transform: scale(1.2);
-}
+@media screen and (max-width: 170px) { * { visibility: hidden }}
 
-
-
-@media screen and (max-width: 400px) {
-    .profileBox {
-        margin-top: 230px;
-        width: 350px;
-        margin-left: calc(50% - 175px);
-    }
-    #immagine {
-        margin-left: calc(50% - 35px);
-    }
-    .linksbox {
-        width: 280px;
-        margin-left: calc(50% - 140px);
-    }
-    .discord_rp {
-        width: 92%;
-        height: 90px;
-        margin-left: calc(50% - 46%);
-    }
-}
-@media screen and (max-width: 800px) and (min-width: 401px) {
-    .profileBox {
-        margin-top: 230px;
-    }
-    .linksbox {
-        width: 90%;
-        margin-left: calc(50% - 45%);
-    }
-}
-@media  screen and (min-width: 801px) {
-    .profileBox {
-        margin-top: 230px;
-    }
-}
-@media screen and (max-width: 278px) {
-    .linksbox {
-        width: 85%;
-        margin-left: calc(50% - 42.5%);
-    }
-    .profileBox {
-        width: 70%;
-        margin-left: calc(50% - 35%);
-    }
-}
-@media screen and (max-width: 261px) {
-    .discord_rp {
-        width: 92%;
-        height: 120px;
-        margin-left: calc(50% - 46%);
-    }
-}
 @keyframes colortransition {
     100%, 0%{
         color: rgb(255,0,0);
@@ -229,3 +194,15 @@ body {
         color: rgba(0, 225, 255, 0.404);
     }
 };
+
+@keyframes gradient {
+    0% {
+      background: linear-gradient(45deg, red, yellow);
+    }
+    50% {
+      background: linear-gradient(45deg, yellow, green);
+    }
+    100% {
+      background: linear-gradient(45deg, green, blue);
+    }
+  }
