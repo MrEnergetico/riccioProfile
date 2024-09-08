@@ -1,0 +1,53 @@
+@font-face { font-family: Panton\ Black\ Caps; src: url(fonts/Panton\ Black\ Caps.ttf); }
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    height: 80px;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Panton Black Caps";
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.grid-item {
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    color: #4CAF50;
+    font-family: "Panton Black Caps";
+}
