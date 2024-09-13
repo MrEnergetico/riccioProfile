@@ -1,17 +1,21 @@
 let song_status = 'off'
 let turboPazzo = false;
 
+//7
+
 document.addEventListener('DOMContentLoaded', () => {
+
     setInterval(() => {
         if (turboPazzo == true) {
             let riccio = document.createElement('img');
             riccio.src = 'media/sito/dancing.gif';
             riccio.className = 'immagine2';
-            const x = Math.random() * (window.innerWidth - 150);
-            const y = Math.random() * (window.innerHeight - 150);
+            const x = Math.random() * (window.innerWidth - 170);
+            const y = Math.random() * (window.innerHeight - 170);
             riccio.style.marginLeft = `${x}px`;
             riccio.style.marginTop = `${y}px`;
-            riccio.style.transform = `rotate(${Math.floor(Math.random() * 41) - 20}deg)`; // Cambiato 'letter' in 'riccio'
+            riccio.draggable = false;
+            riccio.style.transform = `rotate(${Math.floor(Math.random() * 41) - 20}deg)`;
             document.body.appendChild(riccio);
             setTimeout(() => {
                 riccio.remove();    
@@ -23,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 100);
         };
     }, 1000);
+
 });
 
 async function playsong() {
@@ -32,6 +37,8 @@ async function playsong() {
         song_status = 'on';
         document.getElementById('song').play();
         document.getElementById('immagine').src = 'media/sito/dancing.gif';
+        let audio = document.getElementById('song');
+        if (audio.currentTime <= 0) audio.currentTime += 8;
         turboPazzo = true;
     } else if (song_status == 'on') {
         await clickSound();

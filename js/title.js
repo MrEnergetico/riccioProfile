@@ -21,7 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "      CIO",
         "       IO",
         "        O",
-        "‎"
+        "‎",
+        "‎",
+        "IL_RICCIO",
+        "‎",
+        "‎",
+        "IL_RICCIO",
+        "‎",
+        "‎",
     ];
 
     setInterval(() => { 

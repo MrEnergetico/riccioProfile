@@ -6,6 +6,7 @@
     <link href="css/main.css" rel="stylesheet">
     <script src="js/music.js"></script>
     <script src="js/baackgroundChanger.js"></script>
+    <script src="js/mouse.js"></script>
     <script src="js/title.js"></script>
     <script src="js/keyEvent.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
@@ -13,6 +14,9 @@
     <link rel="website icon" type="png" href="media/sito/icon.png">
 </head>
 <body>
+    
+    <img src="media/sito/songs/playbutton.png" width="75px" id="play_song" onclick="playsong()" draggable="false">
+
     <div class="profileBox">
         <img id="immagine" src="media/profilo/pfp.png" onclick="salve()" draggable="false">
         <div class="nome" id="nome">IL_RICCIO</div>
@@ -34,25 +38,12 @@
             </svg>
         </div>
     </div>
-    <div class="linksbox">
-    <div class="snowflakes" aria-hidden="true">
-        <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false">
-        <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false">
-        <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false">
-        <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false">
-        <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false">
-        <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false">
-        <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false">
-        <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false">
-        <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false">
-        <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false">
-    </div>
-    <div id="score" class="score"></div>
-    <img src="media/sito/songs/playbutton.png" width="75px" id="play_song" onclick="playsong()" draggable="false">
+
+    <div class="snowflakes" aria-hidden="true"> <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> </div>
+
     <audio id="song" src="media/sito/songs/music.mp3" loop></audio>
-    <audio id="salveIoSonoRiccio" src="media/sito/songs/ls.mp3"></audio>
+    <audio id="salveIoSonoRiccio" src="media/sito/songs/RiccioVoiceReveal.mp3"></audio>
     <audio id="riccioSong" src="media/sito/songs/riccio.mp3"></audio>
-    <audio id="clickSound" src="media/sito/songs/click.mp3"></audio>
-    <div class="nuhhu" onmouseover="alert('addio')"></div>
+    <audio id="clickSound" src="media/sito/songs/click.mp3"></audio>        
 </body>
 </html>

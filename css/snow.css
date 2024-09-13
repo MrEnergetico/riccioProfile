@@ -1,10 +1,3 @@
-.snowflake {
-    color: #fff;
-    font-size: 1em;
-    font-family: Arial;
-    text-shadow: 0 0 1px #000;
-}
-  
 @-webkit-keyframes snowflakes-fall {
 	0% {
 		top: -10%
@@ -75,7 +68,7 @@
 	animation-timing-function: linear, ease-in-out;
 	animation-iteration-count: infinite, infinite;
 	animation-play-state: running, running;
-	cursor: pointer;
+	z-index: -10;
 }
 
 .snowflake:nth-of-type(0) {

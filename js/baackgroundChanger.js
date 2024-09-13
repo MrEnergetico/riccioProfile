@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const n = Math.floor(Math.random() * 4);
 
-    nameColor = '#ff0000'
+    nameColor = '#ff0000';
     
     document.body.style.backgroundImage = `url(media/sito/backgrounds/${n}.png)`;
 
