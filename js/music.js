@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setInterval(() => {
         if (turboPazzo == true) {
+            if (document.getElementById('discordBox').classList == 'show') return;
             let riccio = document.createElement('img');
             riccio.src = 'media/sito/dancing.gif';
             riccio.className = 'immagine2';
@@ -33,7 +34,7 @@ function isDecimal(value) {
 
 async function playsong() {
     if (song_status == 'off') {
-        await clickSound();
+        sfx('click');
         document.getElementById('play_song').src = 'media/sito/songs/pausebutton.png';
         song_status = 'on';
         document.getElementById('song').play();
@@ -42,7 +43,7 @@ async function playsong() {
         if (audio.currentTime <= 0) audio.currentTime += 8;
         turboPazzo = true;
     } else if (song_status == 'on') {
-        await clickSound();
+        sfx('click');
         document.getElementById('play_song').src = 'media/sito/songs/playbutton.png';
         song_status = 'off';
         document.getElementById('song').pause();
@@ -51,11 +52,49 @@ async function playsong() {
     };
 };
 
-function salve() {
-    document.getElementById('salveIoSonoRiccio').play();
-};
+let doSubtitles = true;
 
+async function eos() {
 
-async function clickSound() {
-    await document.getElementById('clickSound').play();
+    if (doSubtitles) {
+        //doSubtitles = false;
+        let a = document.createElement('audio');
+        a.src = `media/sfx/english.mp3`;
+        a.play();
+        a.currentTime += 1;
+        a.addEventListener('play', async () => {
+            const subtitles = [
+                "baby you got something in your nose",
+                "sniffing that cake did you fill the hole",
+                "hope you finf peace for yourself",
+                "new boyfriend ain't gonna fill the void",
+                "do you even really like this track",
+                "take away the drougs but you feel the noise",
+                "more and more you try to run away",
+                "you're fucking yourself do you feel the toy",
+            ];
+            let n = 0;
+            document.getElementById('subtitles').textContent = subtitles[n];
+            n++;
+            setInterval(() => { 
+                if (n > subtitles.length) return document.getElementById('subtitles').remove();
+                document.getElementById('subtitles').textContent = subtitles[n];
+                n++;
+            }, 3000);
+        });
+    } else if (!doSubtitles) {
+        
+        sfx()
+
+        
+
+    };
+
+}
+
+function sfx(t) {
+    let a = document.createElement('audio');
+    a.src = `media/sfx/${t}.mp3`;
+    a.play();
+    a.remove();
 };

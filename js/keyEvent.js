@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         if (str.includes('riccio')) {
             str = '';
-            document.getElementById('riccioSong').play();
+            sfx('riccio');
         } else if (str.includes('energia')) {
             str = '';
             window.location.href = 'scuola/lavori/tecnologia/fonti-di-energia.html';
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         setTimeout(() => {
             letter.remove();
         }, 1000);
-        clickSound();
+        sfx('click')
     });
     
     function randomColor() {

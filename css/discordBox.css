@@ -1,11 +1,11 @@
 .discordBox {
-    width: 500px;
+    width: min(500px, 90%);
     height: 500px;
-    background-color: #000000bd;
+    background-color: #36393e;
     border-radius: 20px;
-    border: 5px solid blue;
+    border: 5px solid rgb(132, 0, 255);
     margin-top: 100px;
-    margin-left: calc(50% - 255px);
+    margin-left: calc(50% - 225px);
     backdrop-filter: blur(7px);
     position: absolute;
     z-index: 1;
@@ -13,6 +13,12 @@
 } .discordBox.show {
     visibility: visible;
     animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@media (max-width: 500px) {
+    .discordBox {
+        margin-left: calc(50% - 45% - 5px);
+    }
 }
 
 #exit {
