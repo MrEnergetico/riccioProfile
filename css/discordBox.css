@@ -1,0 +1,75 @@
+.discordBox {
+    width: 500px;
+    height: 500px;
+    background-color: #000000bd;
+    border-radius: 20px;
+    border: 5px solid blue;
+    margin-top: 100px;
+    margin-left: calc(50% - 255px);
+    backdrop-filter: blur(7px);
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+} .discordBox.show {
+    visibility: visible;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+#exit {
+    color: white;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: calc(95% - 15px);
+    transition: transform 0.8s;
+} #exit:hover {
+    color: red;
+    transform: rotate(180deg);
+}
+
+.discordBox img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+.discordBox h1 {
+    color: white;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-family: "Roboto", sans-serif;
+}
+.discordBox h2 {
+    margin-top: 5px;
+    color: white;
+    margin-left: 15px;
+    font-family: "Roboto", sans-serif;
+}
+#addFriend {
+    color: white;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-top: -22.5px;
+    margin-left: 110px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    } to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    } to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}

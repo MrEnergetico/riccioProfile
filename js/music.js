@@ -1,8 +1,6 @@
 let song_status = 'off'
 let turboPazzo = false;
 
-//7
-
 document.addEventListener('DOMContentLoaded', () => {
 
     setInterval(() => {
@@ -27,8 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 100);
         };
     }, 1000);
-
 });
+
+function isDecimal(value) {
+    return typeof value === 'number' && !Number.isInteger(value);
+}
 
 async function playsong() {
     if (song_status == 'off') {

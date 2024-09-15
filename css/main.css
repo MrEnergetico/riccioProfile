@@ -17,7 +17,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    overflow: hidden;
+    overflow: hidden
 }
 
 #play_song {
@@ -27,6 +27,7 @@ body {
     cursor: pointer;
     opacity: 0;
     animation: fadeIn2 1s ease-in-out forwards;
+    transition: transform 0.5s;
     position: absolute;
 } #play_song:hover {
     transition: all 0.2s;
@@ -35,12 +36,12 @@ body {
 }
 
 .profileBox {
-    width: 360px;
+    width: min(360px,90%);
     height: 300px;
     background-image: linear-gradient(rgba(70, 4, 99, 0.422), rgba(0, 0, 0, 0.422), rgba(42, 4, 58, 0.422));
     backdrop-filter: blur(7px);
     margin-top: 200px;
-    margin-left: calc(50% - 180px);
+    margin-left: calc(50% - 185px);
     border-radius: 15px;
     opacity: 0;
     filter: drop-shadow(0px 0px 40px rgb(221, 0, 255));
@@ -48,17 +49,24 @@ body {
     position: absolute;
     border: 5px solid rgba(153, 0, 255, 0.437);
 }
+@media (max-width: 410px) {
+    .profileBox {
+        margin-left: calc(50% - 45% - 5px);
+    }
+}
 
 #immagine {
     width: 80px;
     height: 80px;
     border-radius: 100%;
     margin-top: 20px;
-    margin-left: calc(50% - 40px);
+    margin-left: calc(50% - 45px);
     position: static;
     cursor: pointer;
     border: 5px solid rgba(153, 0, 255, 0.437);
-} #immagine:hover {
+    transition: transform 0.5s;
+} 
+#immagine:hover {
     transform: scale(1.1);
     transition: all 1s; 
 }
@@ -72,18 +80,26 @@ body {
 
 .links-box {
     margin-top: 80px;
-    width: 280px;
+    width: min(320px,90%);
     height: 40px;
-    margin-left: calc(50% - 140px);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-} .links-box svg {
+    margin-left: calc(55% - 160px);
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+} 
+@media (max-width: 386px) {
+    .links-box {
+        margin-left: calc(52.5% - 45%);
+    }
+}
+
+.links-box svg {
     color: white;
     width: 40px;
     height: 40px;
     cursor: pointer;
-} .links-box svg:hover {
+    transition: transform 0.5s;
+} 
+.links-box svg:hover {
     transition: all 300ms;
     transform: scale(1.2);
     filter: drop-shadow(5px 5px 40px rgb(255, 255, 255));
@@ -103,44 +119,7 @@ body {
     position: absolute;
 }
 
-@media screen and (max-width: 370px) {
-    .profileBox {
-        width: 260px;
-        margin-left: calc(50% - 130px);
-    }
-    .links-box {
-        width: 180px;
-        height: 50px;
-        margin-left: calc(50% - 90px);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .immagine2 {
-        visibility: hidden;
-    }
-}
 
-@media screen and (max-width: 270px) {
-    .profileBox {
-        width: 220px;
-        margin-left: calc(50% - 110px);
-    }
-    #play_song {
-        margin-left: calc(50% - 37.5px);
-    }
-    .links-box {
-        width: 180px;
-        height: 50px;
-        margin-left: calc(50% - 90px);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .immagine2 {
-        visibility: hidden;
-    }
-}
 
 @keyframes fadeIn {
     from {
