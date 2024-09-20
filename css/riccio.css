@@ -1,0 +1,9 @@
+#riccio {
+    width: 60px;
+    position: absolute;
+    transition: transform 1s linear;
+    z-index: -99;
+    margin-top: 20px;
+    margin-left: 20px;
+    visibility: hidden;
+}

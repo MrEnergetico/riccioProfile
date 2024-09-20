@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/presence.css">
     <link rel="stylesheet" href="css/discordBox.css">
+    <link rel="stylesheet" href="css/riccio.css">
     <link rel="stylesheet" href="css/snow.css">
     <script src="js/music.js"></script>
     <script src="js/baackgroundChanger.js"></script>
-    <script src="js/visits.js"></script>
+    <script src="js/presence.js"></script>
     <script src="js/title.js"></script>
     <script src="js/keyEvent.js"></script>
     <script src="js/discrordBox.js"></script>
+    <script src="js/riccio.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>‎ </title>
     <link rel="website icon" type="png" href="media/sito/icon.png">
@@ -22,6 +25,12 @@
     <div class="profileBox">
         <img id="immagine" src="media/profilo/pfp.png" onclick="eos()" draggable="false">
         <div class="nome" id="nome">IL_RICCIO</div>
+        <div id="presenceStatus"></div>
+        <div id="activitybox">
+            <img id="presenceImg">
+            <h4 id="activityText1"></h4>
+            <h5 id="activityText2"></h5>
+        </div>
         <div class="links-box">
             <svg xmlns="http://www.w3.org/2000/svg" onclick="window.open('https://t.me/il_riccio1234'), sfx('click')" draggable="false" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16" >
                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
@@ -40,7 +49,7 @@
             </svg>
         </div>
     </div>
-
+    
     <div class="discordBox" id="discordBox">
         <svg id="exit" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
@@ -54,11 +63,13 @@
                 <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
             </svg>
         </abbr>
+    
     </div>
-
     <div id="subtitles"></div>  
-
     <div class="snowflakes" aria-hidden="true"> <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/light_blue_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> <img src="media/orbs/purple_orb.png" class="snowflake" width="20px" id="snowflake" draggable="false"> </div>
+
+    <img src="media/sito/riccio.png" id="riccio" draggable="false">
+    
     <audio id="song" src="media/sito/songs/music.mp3" loop></audio>    
 </body>
 </html>

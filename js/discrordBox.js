@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('addFriend').addEventListener('click', async () => {
         let a = document.createElement("textarea");
         a.value = 'il_riccio';
+        a.style.visibility = 'hidden';
         document.body.appendChild(a);
         a.select();
         a.setSelectionRange(0, 99999);

@@ -9,8 +9,6 @@
     color: aliceblue;
 }
 
-
-
 body {
     background-color: black;
     background-image: url("../media/sito/backgrounds/1.png");
@@ -37,17 +35,17 @@ body {
 
 .profileBox {
     width: min(360px, 90%);
-    height: 300px;
+    height: 320px;
     background-image: linear-gradient(rgba(70, 4, 99, 0.422), rgba(0, 0, 0, 0.422), rgba(42, 4, 58, 0.422));
     backdrop-filter: blur(7px);
-    margin-top: 200px;
+    margin-top: 190px;
     margin-left: calc(50% - 185px);
     border-radius: 15px;
     opacity: 0;
     filter: drop-shadow(0px 0px 40px rgb(221, 0, 255));
     animation: fadeIn 1s ease-in-out forwards;
     position: absolute;
-    border: 5px solid rgba(153, 0, 255, 0.437);
+    border: 5px solid rgba(81, 0, 136, 0.475);
 }
 @media (max-width: 410px) {
     .profileBox {
@@ -63,12 +61,8 @@ body {
     margin-left: calc(50% - 45px);
     position: static;
     cursor: pointer;
-    border: 5px solid rgba(153, 0, 255, 0.437);
-    transition: transform 0.5s;
-} 
-#immagine:hover {
-    transform: scale(1.1);
-    transition: all 1s; 
+    border: 5px solid rgba(81, 0, 136, 0.475);
+    filter: drop-shadow(2.5px 5px 40px rgb(234, 0, 255));
 }
 
 .nome {
@@ -76,6 +70,7 @@ body {
     margin-top: 5px;
     text-align: center;
     font-family: "Panton Black Caps";
+    z-index: 100;
 }
 
 #subtitles {
@@ -88,10 +83,17 @@ body {
     margin-top: 550px;
     font-family: "Panton Black Caps";
     visibility: visible;
-    background: linear-gradient(110deg,rgb(0, 187, 255),rgb(149, 0, 255));
+    background: linear-gradient(110deg, rgb(0, 187, 255), rgb(149, 0, 255));
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: nameColored 5s linear infinite;
+    border-radius: 20px;
+    filter: drop-shadow(50px 50px 40px rgb(0, 0, 0));
+}
+
+@media (max-width: 1000px) {
+    #subtitles {
+        visibility: hidden;
+    }
 }
 
 @keyframes nameColored {
@@ -104,7 +106,7 @@ body {
 }
 
 .links-box {
-    margin-top: 80px;
+    margin-top: 20px;
     width: min(320px,90%);
     height: 40px;
     margin-left: calc(55% - 160px);
@@ -114,6 +116,9 @@ body {
 @media (max-width: 386px) {
     .links-box {
         margin-left: calc(52.5% - 45%);
+    }
+    .immagine2 {
+        z-index: -10;
     }
 }
 
@@ -142,6 +147,8 @@ body {
     width: 150px;
     height: 150px;
     position: absolute;
+    border: 5px solid rgba(114, 0, 190, 0.77);
+    border-radius: 50%;
 }
 
 

@@ -1,0 +1,48 @@
+@font-face { font-family: Panton\ Black\ Caps; src: url(../fonts/Panton\ Black\ Caps.ttf); }
+
+#presenceStatus {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-top: -72px;
+    margin-left: 195px;
+    background-color: gray;
+    border: 3.5px solid rgba(0, 0, 0, 0.778);
+    border-radius: 50%;
+}
+
+#activitybox {
+    background-color: rgba(0, 0, 0, 0.611);
+    width: 320px;
+    height: 80px;
+    margin-top: 10px;
+    margin-left: calc(50% - 160px);
+    border-radius: 20px;
+    visibility: visible;
+    filter: drop-shadow(2.5px 5px 40px rgb(234, 0, 255));
+}
+
+#presenceImg {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+#activitybox h4 {
+    color: white;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 80px;
+    font-family: "Roboto", sans-serif;
+}
+
+#activitybox h5 {
+    color: white;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 80px;
+    font-family: "Roboto", sans-serif;
+}

@@ -1,6 +1,8 @@
 let str = '';
 let ultrapropulsione = false;
 
+let count = 0;
+
 document.addEventListener('DOMContentLoaded', async () => {
 
     document.addEventListener('keydown', async function(event) {
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         letter.style.color = color;
         letter.style.fontSize = `${Math.floor(Math.random() * 21) + 25}px`;
         letter.style.transform = `rotate(${Math.floor(Math.random() * 41) - 20}deg)`;
-        
+        count++;
         if (str.includes('riccio')) {
             str = '';
             sfx('riccio');
@@ -36,7 +38,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         setTimeout(() => {
             letter.remove();
         }, 1000);
-        sfx('click')
+        sfx('click');
+        //console.log(`${count}/1000`);
     });
     
     function randomColor() {

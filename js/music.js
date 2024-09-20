@@ -28,17 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000);
 });
 
-function isDecimal(value) {
-    return typeof value === 'number' && !Number.isInteger(value);
-}
-
 async function playsong() {
     if (song_status == 'off') {
         sfx('click');
         document.getElementById('play_song').src = 'media/sito/songs/pausebutton.png';
         song_status = 'on';
         document.getElementById('song').play();
-        document.getElementById('immagine').src = 'media/sito/dancing.gif';
+        document.getElementById('immagine').src = 'media/sito/white.png';
         let audio = document.getElementById('song');
         if (audio.currentTime <= 0) audio.currentTime += 8;
         turboPazzo = true;
@@ -52,45 +48,37 @@ async function playsong() {
     };
 };
 
-let doSubtitles = true;
+let interval = '';
+let a = '';
 
 async function eos() {
-
-    if (doSubtitles) {
-        //doSubtitles = false;
-        let a = document.createElement('audio');
-        a.src = `media/sfx/english.mp3`;
-        a.play();
-        a.currentTime += 1;
-        a.addEventListener('play', async () => {
-            const subtitles = [
-                "baby you got something in your nose",
-                "sniffing that cake did you fill the hole",
-                "hope you finf peace for yourself",
-                "new boyfriend ain't gonna fill the void",
-                "do you even really like this track",
-                "take away the drougs but you feel the noise",
-                "more and more you try to run away",
-                "you're fucking yourself do you feel the toy",
-            ];
-            let n = 0;
+    if (interval) clearInterval(interval);
+    if (a) a.pause();
+    a = document.createElement('audio');
+    a.src = `media/sfx/english.mp3`;
+    a.play();
+    a.currentTime += 1;
+    a.addEventListener('play', async () => {
+        const subtitles = [
+            "baby you got something in your nose",
+            "sniffing that cake did you fill the hole",
+            "hope you find peace for yourself",
+            "new boyfriend ain't gonna fill the void",
+            "do you even really like this track",
+            "take away the drougs but you feel the noise",
+            "more and more you try to run away",
+            "you're fucking yourself do you feel the toy",
+        ];
+        let n = 0;
+        document.getElementById('subtitles').textContent = subtitles[n];
+        n++;
+        interval = setInterval(() => { 
+            if (n > subtitles.length) return document.getElementById('subtitles').textContent = '';
             document.getElementById('subtitles').textContent = subtitles[n];
             n++;
-            setInterval(() => { 
-                if (n > subtitles.length) return document.getElementById('subtitles').remove();
-                document.getElementById('subtitles').textContent = subtitles[n];
-                n++;
-            }, 3000);
-        });
-    } else if (!doSubtitles) {
-        
-        sfx()
-
-        
-
-    };
-
-}
+        }, 3000);
+    });
+};
 
 function sfx(t) {
     let a = document.createElement('audio');
