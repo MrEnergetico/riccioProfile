@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work in Progress...</title>
+</head>
+<body>
+    
+    <div id="text">WORK IN PROGRESS</div>
+
+</body>
+
+<style>
+    @font-face { font-family: Panton\ Black\ Caps; src: url('../fonts/Panton\ Black\ Caps.ttf'); }
+    *::selection {
+        background-color: transparent;
+    }
+    body {
+        background-color: black;
+        background-image: url('bg.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        overflow: hidden 
+    }
+    #text {
+        color: white;
+        font-family: "Panton Black Caps";
+        font-size: 70px;
+        margin-top: 250px;
+        text-align: center;
+    }
+</style>
+<script>
+    let texts = [
+        "WORK IN PROGRESS",
+        "WORK IN PROGRESS.",
+        "WORK IN PROGRESS..",
+        "WORK IN PROGRESS...",
+    ];
+    let n = 1;
+    setInterval(() => {  
+        document.getElementById('text').textContent = texts[n];
+        n++;
+        if (n >= texts.length) n = 0;
+    }, 700);
+</script>
+</html>
